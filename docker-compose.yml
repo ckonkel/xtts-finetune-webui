@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  xtts-finetune-webui:
+    build: .
+    container_name: xtts-finetune-webui
+    ports:
+      - "8010:8010"
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]

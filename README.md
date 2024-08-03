@@ -71,3 +71,9 @@ If you are looking for an option for normal XTTS use look here [https://github.c
 2. To start the server start `start.sh`
 3. Go to the local address `127.0.0.1:5003`
 ~                                            
+
+### Docker
+
+1. Run `docker build -t xtts-finetune-webui .`
+  * To debug Run ```export DOCKER_BUILDKIT=1 \
+docker build --progress=plain -t xtts-finetune-webui .```
