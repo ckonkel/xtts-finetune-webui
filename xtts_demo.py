@@ -688,6 +688,7 @@ if __name__ == "__main__":
         share=False,
         debug=False,
         server_port=args.port,
+        server_name="0.0.0.0"
         # inweb=True,
         # server_name="localhost"
     )

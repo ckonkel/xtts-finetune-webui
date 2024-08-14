@@ -2,14 +2,19 @@ version: '3.8'
 
 services:
   xtts-finetune-webui:
-    build: .
-    container_name: xtts-finetune-webui
+    image: xtts-finetune-webui:latest
+    container_name: xtts-ft-ui
     ports:
-      - "8010:8010"
-    environment:
-      - CUDA_VISIBLE_DEVICES=0
+      - 5003:5003
+    # environment:
+    #   - HOST=0.0.0.0
+    #   - PORT=5003
+    volumes:
+      - /home/botbox/docker/xtts-ft-ui_data/finetune_models:/app/finetune_models
     deploy:
       resources:
         reservations:
           devices:
             - capabilities: [gpu]
+              count: all
+    runtime: nvidia  # Ensure the NVIDIA runtime is used
