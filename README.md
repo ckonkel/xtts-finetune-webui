@@ -1,5 +1,7 @@
 # xtts-finetune-webui
 
+Changes: Added Docker build option.
+
 This webui is a slightly modified copy of the [official webui](https://github.com/coqui-ai/TTS/pull/3296) for finetune xtts.
 
 If you are looking for an option for normal XTTS use look here [https://github.com/daswer123/xtts-webui](https://github.com/daswer123/xtts-webui)
